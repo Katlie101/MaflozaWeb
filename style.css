@@ -1,0 +1,82 @@
+li {
+    display: inline;
+    font-size: larger;
+    
+}
+
+.menubar {
+    display: block;
+    float: right;
+    
+}
+
+.heroimg {
+    position: relative;
+}
+
+.slogan {
+    position: absolute;
+    top: 30px;    
+}
+
+.intro { 
+    text-align: center;
+    position: relative;
+    font-size: x-large;
+    margin-top: 20px;
+    padding: 30px;
+    align-items: center;
+}
+
+.intro img {
+    float: left;
+}
+
+h3 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+h4 {
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.vismisson {
+    display: flex;
+    text-align: center;
+    
+}
+
+.services{
+    
+    padding: 20px;
+    background-color: blue;
+  
+    
+}
+
+.cards {
+    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0,2);
+    transition: 0.3s;
+    margin-right: 30px;
+    background-color: aquamarine;
+    width:30%;
+
+    
+}
+
+.cards img {
+    width: 300px;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+.container {
+    background-color: aquamarine;
+    width: 400px;
+    text-align: center;
+
+}
