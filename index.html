@@ -1,119 +1,168 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/solid.min.css">
+
     <title>title</title>
 </head>
+
 <body>
     <div class="menubar">
+        <div class="menu-logo">
+            <a href="#">Ma'Floza</a>
+        </div>
         <ul>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Services</li></a>
-            <a href="#"><li>Contact Us</li></a>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
         </ul>
     </div>
-    <div class="heroimg">
-    <img src="assets/heroimg.png" alt="" width="100%"/>
+    <div class="hero-section">
+        <div class="hero-img">
+            
+            <div class="slogan">
+                <div></div>
+            </div>
+            <a id="btnCallUsNow" href="#contact">Call Us Now</a>
+        </div>
+      
     </div>
-    <div class="slogan">
-    <img src="assets/slogan.png" alt="" width="60%" />
-    </div>
-    <h1>About</h1>
-    <div class="intro">
-    <img src="assets/logo.jpeg" alt="logo" id="logo" width="400px" height="400px"/>
-    <h3>What is Mafloza's cleaning co.?</h3>
-    <p>Mafloza's Cleaning Services is a proudly South African cleaning company committed to delivering 
-        top-tier, reliable, and eco-friendly cleaning solutions for residential, commercial, 
-        and industrial clients. Established in 2024, we have built a reputation based on trust, attention
-        to detail and unmatched customer service.</p>
 
-    <div class="vismisson">
-    <h3>Our Vision</h3>
-    <p>To become South Africa's most respected and preferred cleaning service provider 
-        through innovation, integrity, and consistent customer satisfaction.</p>
-    <h3>Our Mission</h3>
-    <p>To provide professional cleaning services that exceed client expectations by using safe products, 
-        well-trained staff, and modern cleaning technology.
-    </p>
+    <div class="about" id="about">
+        <h1>About</h1>
+        <div class="articles">
+            <div class="side-article">
+                <img src="assets/logo.jpeg" alt="" width="45%" />
+                <h3 class="kaushan-script-regular">What is Mafloza's cleaning co.?</h3>
+                <p>Mafloza's Cleaning Services is a proudly South African cleaning company committed to delivering
+                    top-tier, reliable, and eco-friendly cleaning solutions for residential, commercial,
+                    and industrial clients. Established in 2024, we have built a reputation based on trust, attention
+                    to detail and unmatched customer service.</p>
+            </div>
+
+            <div class="statements">
+                <div class="vision">
+                    <h3 class="kaushan-script-regular">Our Vision</h3>
+                    <p>
+                        To become South Africa's most respected and preferred cleaning service provider
+                        through innovation, integrity, and consistent customer satisfaction.
+                    </p>
+                </div>
+                <div class="mission">
+                    <h3 class="kaushan-script-regular">Our Mission</h3>
+                    <p>
+                        To provide professional cleaning services that exceed client expectations by using safe
+                        products,
+                        well-trained staff, and modern cleaning technology.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    </div>
-    <div class="services">
+
+    <div class="services" id="services">
         <h1>Services</h1>
-        <div class="top-cards">
+        <div class="service-cards">
             <div class="cards">
-              <img src="assets/residential.jpg" alt="" width="300px" height="300px">
-                <div class="container">
-                   <p>Homes, apartments, deep cleaning, move-in/move-out.</p>
-                   <h4>Residential cleaning</h4>  
+                <div class="card-image">
+                    <div class="img">
+                        <img src="assets/residential.jpg" alt="" width="200px" height="300px">
+                    </div>
+                </div>
+                <div class="card-text">
+                    <p>Homes, apartments, deep cleaning, move-in/move-out.</p>
+                    <h4>Residential cleaning</h4>
                 </div>
             </div>
             <div class="cards">
-              <img src="assets/Commercialcleaning.jpg" alt="" width="300px" height="300px">
-                <div class="container">
-                  <p>Offices, retail spaces, government buildings.</p>
-                  <h4>Commercial cleaning</h4>  
-               </div>
+                <div class="card-image">
+                    <div class="img">
+                        <img src="assets/Commercialcleaning.jpg" alt="" width="200px" height="300px">
+                    </div>
+                </div>
+                
+                <div class="card-text">
+                    <p>Offices, retail spaces, government buildings.</p>
+                    <h4>Commercial cleaning</h4>
+                </div>
+            </div>
+ 
+            <div class="cards">
+                 <div class="card-image">
+                    <div class="img">
+                         <img src="assets/industrial.jpg" alt="" width="200px" height="300px">
+                    </div>
+                </div>
+               
+                <div class="card-text">
+                    <p>Warehouses, factories, construction site clean-up.</p>
+                    <h4>Industrial cleaning</h4>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card-image">
+                    <div class="img">
+                         <img src="assets/carpetcleaning.jpg" alt="" width="200px" height="300px">
+                    </div>
+                </div>
+                
+                <div class="card-text">
+                    <p>Carpet & upholestry, window cleaning, after-event cleaning, sanization & disinfection services.
+                    </p>
+                    <h4>Specialized cleaning</h4>
+                </div>
             </div>
         </div>
-
-        <div class="bottom-cards">
-            <div class="cards">
-              <img src="assets/industrial.jpg" alt="" width="300px" height="300px">
-                <div class="container">
-                  <p>Warehouses, factories, construction site clean-up.</p>
-                  <h4>Industrial cleaning</h4>   
-                </div>
-            </div>
-            <div class="cards">
-              <img src="assets/carpetcleaning.jpg" alt="" width="300px" height="300px">
-                <div class="container">
-                  <p>Carpet & upholestry, window cleaning, after-event cleaning, sanization & disinfection services.</p>
-                  <h4>Specialized cleaning</h4>   
-                </div>
-            </div>
-        </div>
+       
     </div>
-    
-    <div class="contactus">
+
+    <div class="contactus" id="contact">
         <p> +27 67 891 6669</p>
-        <button id="bottombut">Contact Us</button>
+        <button id="btnContact">Contact Us</button>
     </div>
     <footer>
         <div class="footer">
-        <div class="left-foot">
-        <h5>Address</h5>
-        <p>15203 Extension 76, 
-            Polokwane, 0699
-        </p>
-        <h5>Contact details</h5>
-        <p>+27 67 891 6669</p>
-        <p>+27 67 613 6836</p>
+            <div class="left-foot">
+                <h4>Address</h4>
+                <p>15203 Extension 76,
+                    Polokwane, 0699
+                </p>
+                <h4>Contact Details</h4>
+                <p>+27 67 891 6669</p>
+                <p>+27 67 613 6836</p>
 
-        <h5>Want to chat with us rather?</h5>
-        <a href="#"><img src="assets/waicon.png"/></a>
-        <br>
-        </div>
-        
-        <div class="mid-foot">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.3437912472004!2d29.402037675167644!3d-23.877424878583906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec72777954a5715%3A0xd99cba27b555bae6!2s15203%20Extension%2076%2C%20Polokwane!5e0!3m2!1sen!2sza!4v1755698450709!5m2!1sen!2sza" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h4>Chat to us</h4>
+                <a href="#" class="social-link"><img src="assets/waicon.png" /><span>+27 67 891 6669</span></a>
+                <br>
+            </div>
+
+            <div class="mid-foot">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.3437912472004!2d29.402037675167644!3d-23.877424878583906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec72777954a5715%3A0xd99cba27b555bae6!2s15203%20Extension%2076%2C%20Polokwane!5e0!3m2!1sen!2sza!4v1755698450709!5m2!1sen!2sza"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="right-foot">
+                <h4>Check us out on the socials</h4>
+                <p>@Mafloza's Cleaning</p>
+                <a  class="social-link" href="https://www.facebook.com/profile.php?id=61579793395460"><img src="assets/fbicon.png" /><span>Facebook</span></a>
+                <a  class="social-link" href="#"><img src="assets/xicon.png" /><span>Twitter/X</span></a>
+            </div>
         </div>
 
-        <div class="right-foot">
-        <h5>Check us out on the socials</h5>
-        <p>@Mafloza's Cleaning</p>
-        <a href="https://www.facebook.com/profile.php?id=61579793395460"><img src="assets/fbicon.png"/></a>
-        <a href="#"><img src="assets/xicon.png"/></a>
-        </div>
-        </div>
-            
-        
+
 
     </footer>
 
+    <button id="scrollup"><i class="fa-regular fa-circle-up"></i></button>
 
-
-    
+    <script src="main.js"></script>
 </body>
+
 </html>
