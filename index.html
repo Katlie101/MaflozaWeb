@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <link rel="stylesheet" href="css/solid.min.css">
+    <script src="js/all.min.js"></script>
 
-    <title>title</title>
+    <title>Ma'Floza</title>
 </head>
-
 <body>
     <div class="menubar">
         <div class="menu-logo">
             <a href="#">Ma'Floza</a>
         </div>
-        <ul>
+        <ul id="menu-links">
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
+        <div class="btn-menubar" id="btnBurger">
+            <span>
+                <i class="fa-solid fa-bars"></i>
+            </span>
+        </div>
     </div>
     <div class="hero-section">
         <div class="hero-img">
-            
+
             <div class="slogan">
                 <div></div>
             </div>
             <a id="btnCallUsNow" href="#contact">Call Us Now</a>
         </div>
-      
+
     </div>
 
     <div class="about" id="about">
         <h1>About</h1>
         <div class="articles">
             <div class="side-article">
-                <img src="assets/logo.jpeg" alt="" width="45%" />
+                <div class="logo">
+                    <img src="assets/logo.jpeg" alt="" />
+                </div>
                 <h3 class="kaushan-script-regular">What is Mafloza's cleaning co.?</h3>
                 <p>Mafloza's Cleaning Services is a proudly South African cleaning company committed to delivering
                     top-tier, reliable, and eco-friendly cleaning solutions for residential, commercial,
@@ -85,20 +89,20 @@
                         <img src="assets/Commercialcleaning.jpg" alt="" width="200px" height="300px">
                     </div>
                 </div>
-                
+
                 <div class="card-text">
                     <p>Offices, retail spaces, government buildings.</p>
                     <h4>Commercial cleaning</h4>
                 </div>
             </div>
- 
+
             <div class="cards">
-                 <div class="card-image">
+                <div class="card-image">
                     <div class="img">
-                         <img src="assets/industrial.jpg" alt="" width="200px" height="300px">
+                        <img src="assets/industrial.jpg" alt="" width="200px" height="300px">
                     </div>
                 </div>
-               
+
                 <div class="card-text">
                     <p>Warehouses, factories, construction site clean-up.</p>
                     <h4>Industrial cleaning</h4>
@@ -107,10 +111,10 @@
             <div class="cards">
                 <div class="card-image">
                     <div class="img">
-                         <img src="assets/carpetcleaning.jpg" alt="" width="200px" height="300px">
+                        <img src="assets/carpetcleaning.jpg" alt="" width="200px" height="300px">
                     </div>
                 </div>
-                
+
                 <div class="card-text">
                     <p>Carpet & upholestry, window cleaning, after-event cleaning, sanization & disinfection services.
                     </p>
@@ -118,7 +122,7 @@
                 </div>
             </div>
         </div>
-       
+
     </div>
 
     <div class="contactus" id="contact">
@@ -128,39 +132,50 @@
     <footer>
         <div class="footer">
             <div class="left-foot">
-                <h4>Address</h4>
-                <p>15203 Extension 76,
-                    Polokwane, 0699
-                </p>
-                <h4>Contact Details</h4>
-                <p>+27 67 891 6669</p>
-                <p>+27 67 613 6836</p>
+                <div class="address">
+                    <h4>Address</h4>
+                    <p>15203 Extension 76,
+                        Polokwane, 0699
+                    </p>
+                </div>
+                <div class="contact-numbers">
+                    <h4>Contact Details</h4>
+                    <p>+27 67 891 6669</p>
+                    <p>+27 67 613 6836</p>
+                </div>
 
-                <h4>Chat to us</h4>
-                <a href="#" class="social-link"><img src="assets/waicon.png" /><span>+27 67 891 6669</span></a>
-                <br>
+                <div class="chat">
+                    <h4>Chat to us</h4>
+                    <a class="social-link"
+                        href="https://wa.me/27678916669/?text=Hi%2C%20I%27m%20interested%20in%20your%20cleaning%20services.%20I%27d%20like%20to%20know%20more%20about%20them."><img
+                            src="assets/waicon.png" /><span>Whatsapp</span></a>
+
+                </div>
             </div>
 
             <div class="mid-foot">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.3437912472004!2d29.402037675167644!3d-23.877424878583906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec72777954a5715%3A0xd99cba27b555bae6!2s15203%20Extension%2076%2C%20Polokwane!5e0!3m2!1sen!2sza!4v1755698450709!5m2!1sen!2sza"
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="right-foot">
                 <h4>Check us out on the socials</h4>
                 <p>@Mafloza's Cleaning</p>
-                <a  class="social-link" href="https://www.facebook.com/profile.php?id=61579793395460"><img src="assets/fbicon.png" /><span>Facebook</span></a>
-                <a  class="social-link" href="#"><img src="assets/xicon.png" /><span>Twitter/X</span></a>
+                <a class="social-link" href="https://www.facebook.com/profile.php?id=61579793395460"><img
+                        src="assets/fbicon.png" /><span>Facebook</span></a>
+                <a class="social-link" href="#"><img src="assets/xicon.png" /><span>Twitter/X</span></a>
             </div>
         </div>
-
+        <div class="credit">
+            Made by GK WebDev & Katlego Masekoameng
+        </div>
 
 
     </footer>
 
-    <button id="scrollup"><i class="fa-regular fa-circle-up"></i></button>
+    <button id="scrollup"><i class="fa-regular fa-circle-up fa-2xl"></i></button>
 
     <script src="main.js"></script>
 </body>
