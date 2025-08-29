@@ -3,12 +3,14 @@ let toggle = false;
 
 let btnScrollTop = document.getElementById("scrollup");
 let btnMenuBar = document.getElementById("btnBurger");
+let btnCloseSideNav = document.getElementById("btnCloseSideNav");
 let sideNav = document.getElementById("menu-links");
 
 // events
 window.onscroll = onWindowScroll;
 window.onresize = toggleSideNav;
 btnMenuBar.onclick = toggleMenu;
+btnCloseSideNav.onclick = closeSideMenu;
 btnScrollTop.onclick = () =>
   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
 
@@ -42,17 +44,18 @@ function scrollToTop() {
 
 // toggle nav sidebar
 function toggleMenu() {
-  if(toggle==false){
+  
     btnMenuBar.classList.add("menubar-active");
-     sideNav.classList.add("sideNav");
+     sideNav.classList.add("sideNav","slide-in");
     toggle=true
-  }else{
-    btnMenuBar.classList.remove("menubar-active");
-     sideNav.classList.remove("sideNav");
-    toggle=false
-  }
-   
+  
+}
 
+function closeSideMenu(){
+  btnMenuBar.classList.remove("menubar-active");
+     sideNav.classList.remove("sideNav","slide-in");
+
+    toggle=false
 }
 
 
