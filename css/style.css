@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -10,16 +7,26 @@
 :root {
   --clean-blue: #3daeff;
   --footer-background: lightgray;
+  --primary-blue: #327cae;
+  --dark-blue: #2d73a9;
+  --tertiary-color: #393f3f;
+  --alter-color: #b98057;
+  --secondary: #fefeff;
+  --white: #ffffff;
+  --main-font: #000000;
+  --header-h: 64px;
 }
 
-html,
+html{
+    scroll-behavior: smooth;
+}
+
 body {
-  scroll-behavior: smooth;
   min-height: 100vh;
   width: 100%;
+  font-family: "Inter", sans-serif;
+
 }
-
-
 
 .kaushan-script-regular {
   font-family: "Kaushan Script", cursive;
@@ -33,7 +40,8 @@ body {
   bottom: 3.5em;
   right: 4em;
   border-radius: 50%;
-  padding: 1em;
+  padding: .8em .5em;
+  font-size: 1em;
 }
 
 h1 {
@@ -51,7 +59,7 @@ h3 {
 .menubar {
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--secondary);
   position: fixed;
   top: 0;
   z-index: 2;
@@ -70,11 +78,8 @@ h3 {
     text-decoration: none;
     font-weight: 500;
     font-size: 1em;
-    color: #000000;
+    color: var(--tertiary-color);
     padding: 1em 1.5em;
-  }
-  ul{
-    animation: all 4s ease-in-out 2s;
   }
 
   ul li {
@@ -86,16 +91,19 @@ h3 {
     text-decoration: none;
     font-weight: 500;
     font-size: 1em;
-    color: #000000;
+    color: var(--tertiary-color);
     padding: 1em 1.5em;
-    animation: color 4s ease-in-out 2s;
+    
+    &.active{
+       color: var(--primary-blue);
+    }
 
     &:hover,
     &:active {
-      color: var(--clean-blue);
-      animation: color 4s ease-in-out 2s;
+      color: var(--primary-blue);
     }
   }
+
 
 
   .btn-menubar {
@@ -104,8 +112,8 @@ h3 {
     padding: 1em;
 
     &:hover {
-      background-color: #3daeff;
-      color: #ffffff;
+      background-color: var(--primary-blue);
+      color: var(--secondary);
     }
 
     span {
@@ -114,64 +122,75 @@ h3 {
       width: 100%;
       text-align: center;
     }
-
   }
 
-  .active {
-    background-color: #3daeff;
-    color: #ffffff;
+  .menubar-active {
+    background-color: var(--dark-blue);
+    color: var(--secondary);
   }
 
-  .side-navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: absolute;
-    right: 0;
-    z-index: 2;
-    margin-top: 56px;
-    background-color: #ffffff;
-    height: 100vh;
-    width: 40%;
-    animation: all 4s ease-in-out 2s;
+  .sideNav {
+      flex-direction: column;
+      justify-content: flex-start;
+      position: absolute;
+      right: 0;
+      z-index: 2;
+      margin-top: 50px;
+      background-color: #ffffff;
+      height: 100vh;
+      width: 50%;
+      animation: slide-in 1s ease;
 
-    li {
-      width: 100%;
-      text-align: center;
-    }
+      li {
+        width: 100%;
+        text-align: center;
+      }
 
-    li a {
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1em;
-      color: #000000;
-      padding: 1em 1.5em;
-      width: 100%;
-      animation: all 4s ease-in-out 2s;
+      li a {
+        width: 100%;
 
-      &:hover,
-      &:active {
-        color: #ffffff;
-        background-color: var(--clean-blue);
+        &.active {
+          color: var(--secondary)!important;
+          background-color: var(--primary-blue)!important;
+          transition: all .6s ease;
+        }
+
+        &:hover {
+          color: var(--primary-blue);
+          background-color: #327cae3a;
+        }
       }
     }
-  }
 
-  @media screen and (max-width:700px) {
-
+  @media screen and (max-width: 850px) {
     .btn-menubar {
       display: flex;
     }
 
-    ul {
+    .sideNav{
+      display: flex;
+    }
+
+    ul{
       display: none;
     }
+
+    
   }
 
-  @media screen and (max-width:480px) {
+  @media screen and (max-width: 480px) {
     .side-bar {
       width: 60%;
     }
+  }
+}
+
+@keyframes slide-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40%;
   }
 }
 
@@ -179,6 +198,10 @@ h3 {
   height: 100vh;
   width: 100%;
   scroll-snap-type: mandatory;
+
+  @media screen and (max-width:480px) {
+    height: 70vh;
+  }
 
   .hero-img {
     height: 100%;
@@ -204,7 +227,7 @@ h3 {
         margin-left: 1em;
       }
 
-      @media screen and (max-width:850px) {
+      @media screen and (max-width: 850px) {
         div {
           width: 80%;
         }
@@ -212,45 +235,31 @@ h3 {
     }
 
     a#btnCallUsNow {
-      display: block;
-      border-radius: 5px;
-      font-size: 1.2em;
-      padding: .5em 1em;
-      width: max-content;
+
       position: absolute;
       bottom: 5em;
       right: 50%;
       transform: translate(50%, 50%);
-      background-color: var(--clean-blue);
-      color: white;
-      border: 1px solid transparent;
-      text-decoration: none;
-
-      &:hover {
-        color: var(--clean-blue);
-        border-color: var(--clean-blue);
-        background-color: white;
-      }
+ 
     }
   }
-
-
 }
 
 .about {
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  height: 100%;
+  height: min-content;
   background-color: #ffffff;
+  color: var(--tertiary-color);
 
-  @media screen and (max-width:850px) {
+  @media screen and (max-width: 850px) {
     padding: 2.5em 1rem;
   }
 
   .articles {
     display: flex;
-    height: 100%;
+    height: min-content;
 
     .side-article {
       display: flex;
@@ -288,8 +297,6 @@ h3 {
           border-radius: 50%;
         }
       }
-
-
     }
 
     .statements {
@@ -320,7 +327,7 @@ h3 {
       }
     }
 
-    @media screen and (max-width:850px) {
+    @media screen and (max-width: 850px) {
       flex-direction: column;
 
       .side-article {
@@ -332,11 +339,9 @@ h3 {
             height: 70%;
           }
         }
-
       }
 
       .statements {
-
         .vision,
         .mission {
           padding: 0;
@@ -344,8 +349,7 @@ h3 {
       }
     }
 
-    @media screen and (max-width:480px) {
-
+    @media screen and (max-width: 480px) {
       .side-article {
         .logo {
           img {
@@ -353,32 +357,24 @@ h3 {
             height: 100%;
           }
         }
-
       }
-
     }
   }
-
-
-
 }
-
-
 
 .services {
-
   padding: 5em;
-  background-color: var(--clean-blue);
-
-  @media screen and (max-width:450px) {
-
-    padding: 2em;
+  background-color: var(--primary-blue);
+  h1 {
+    color: var(--secondary);
   }
 
+  @media screen and (max-width: 450px) {
+    padding: 2em;
+  }
 }
 
-
-@media screen and (max-width:350px) {
+@media screen and (max-width: 350px) {
   .services {
     padding: 2em 1em;
   }
@@ -400,7 +396,6 @@ h3 {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    animation: all 3s ease 2s;
 
     .card-image {
       width: 100%;
@@ -426,7 +421,6 @@ h3 {
     }
 
     .card-text {
-
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -438,7 +432,7 @@ h3 {
         height: 100%;
         padding: 10px 15px;
         color: #ffffff;
-        background-color: #000000;
+        background-color: var(--tertiary-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -455,18 +449,17 @@ h3 {
   }
 
   .cards:hover {
-    box-shadow: -2px -2px 4px #ffffff, 2px 2px 4px #ffffff,
-      -2px 2px 4px #ffffff, 2px -2px 4px #ffffff;
-    animation: all 3s ease 2s;
+    box-shadow: -2px -2px 4px #ffffff, 2px 2px 4px #ffffff, -2px 2px 4px #ffffff,
+      2px -2px 4px #ffffff;
+    animation: box-shadow 3s ease 2s;
   }
 
-  @media screen and (max-width:950px) {
+  @media screen and (max-width: 950px) {
     grid-template-columns: repeat(2, 300px);
     grid-template-rows: repeat(2, 450px);
     gap: 2em;
 
     .cards {
-
       .card-image {
         width: 100%;
         height: 250px;
@@ -476,24 +469,21 @@ h3 {
       }
 
       .card-text {
-
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 200px;
         text-align: center;
-
       }
     }
   }
 
-  @media screen and (max-width:700px) {
+  @media screen and (max-width: 700px) {
     grid-template-columns: repeat(1, 350px);
     grid-template-rows: 500px;
     gap: 2em;
 
     .cards {
-
       .card-image {
         width: 100%;
         height: 300px;
@@ -503,24 +493,21 @@ h3 {
       }
 
       .card-text {
-
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 200px;
         text-align: center;
-
       }
     }
   }
 
-  @media screen and (max-width:450px) {
+  @media screen and (max-width: 450px) {
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: 500px;
     gap: 2em;
 
     .cards {
-
       .card-image {
         width: 100%;
         height: 300px;
@@ -530,24 +517,21 @@ h3 {
       }
 
       .card-text {
-
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 200px;
         text-align: center;
-
       }
     }
   }
 
-  @media screen and (max-width:350px) {
+  @media screen and (max-width: 350px) {
     grid-template-columns: repeat(1, 100%);
     grid-template-rows: 450px;
     gap: 2em;
 
     .cards {
-
       .card-image {
         width: 100%;
         height: 250px;
@@ -557,19 +541,15 @@ h3 {
       }
 
       .card-text {
-
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 200px;
         text-align: center;
-
       }
     }
   }
-
 }
-
 
 .contactus {
   display: flex;
@@ -580,32 +560,62 @@ h3 {
   font-size: xx-large;
   justify-items: center;
   background-color: #f1ba2e;
-  color: antiquewhite;
+  background-color: var(--tertiary-color);
+
   padding-top: 2%;
   height: 30vh;
   width: 100%;
 
   p {
-    color: #000000;
+    color: var(--secondary);
   }
 
-}
+  p:nth-child(2){
+    background-color: var(--dark-blue);
+    padding: .5em;
+    font-size: .7em;
+    border-radius: 5px;
+    @media screen and (max-width:850px) {
+      display: none;
+    }
+  }
 
-button {
-  display: block;
-  border-radius: 5px;
-  background-color: var(--clean-blue);
-  padding: 10px 15px;
-  color: white;
-  border: 1px solid white;
+  a{
+    display: none!important;
+    font-size: .5em!important;
+    padding: .5em .7em!important;
 
-  &:hover {
-    color: var(--clean-blue);
-    border-color: var(--clean-blue);
-    background-color: white;
+    @media screen and (max-width:850px) {
+      display: block!important;
+    }
   }
 }
 
+.btn {
+      display: block;
+      border-radius: 5px;
+      font-size: 1.2em;
+      padding: 0.5em 1em;
+      width: max-content;
+      background-color: var(--dark-blue);
+      color: white;
+      border: 1px solid transparent;
+      text-decoration: none;
+
+      @media screen and (max-width:850px) {
+        font-size: 1em;
+      }
+
+      @media screen and (max-width:480px) {
+        font-size: .85em;
+      }
+
+      &:hover {
+        color: var(--clean-blue);
+        border-color: var(--clean-blue);
+        background-color: white;
+      }
+    }
 
 .footer {
   display: flex;
@@ -617,20 +627,26 @@ button {
   .social-link {
     display: flex;
     align-items: center;
-    gap: .5em;
-    padding: .5em;
+    gap: 0.5em;
+    padding: 0.5em;
     text-decoration: none;
     color: #000000;
     width: min-content;
+    scale: 1;
+    transition: scale .3s ease;
+
+    &:hover{
+      color: var(--secondary);
+      scale: 1.1;
+    }
 
     img {
       width: 1.5em;
       height: 1.5em;
     }
-
   }
 
-  >div {
+  > div {
     display: flex;
     flex-direction: column;
     padding: 2em 1em;
@@ -655,22 +671,30 @@ button {
   .right-foot {
     align-items: end;
   }
-
-
 }
 
-.credit{
+.credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
   background-color: var(--footer-background);
+
   text-align: center;
-  font-size: .7em;
+  font-size: 0.75em;
   font-weight: 500;
-  padding: .5em;
+  padding: 0.5em;
+
+  p{
+    font-size: 0.8em;
+  }
+
+  @media screen and (max-width:850px) {
+    flex-direction: column;
+  }
 }
 
-
-
-
-@media screen and (max-width:850px) {
+@media screen and (max-width: 850px) {
   .footer {
     flex-direction: column;
     height: 100vh;
@@ -690,8 +714,7 @@ button {
   }
 }
 
-
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
   .footer {
     flex-direction: column;
   }
